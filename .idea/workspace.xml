@@ -6,6 +6,7 @@
     <ignored path=".idea/workspace.xml" />
     <file path="/README.md" changelist="30f66902-cbc5-4b2d-ba48-1d2d08afd878" time="1406017696977" ignored="false" />
     <file path="/.gitingnore" changelist="30f66902-cbc5-4b2d-ba48-1d2d08afd878" time="1406017891288" ignored="false" />
+    <file path="/.gitignore" changelist="30f66902-cbc5-4b2d-ba48-1d2d08afd878" time="1406018181295" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,8 +35,8 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name=".gitingnore" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/.gitingnore">
+      <file leaf-file-name=".gitignore" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
             <state line="0" column="6" selection-start="6" selection-end="6" vertical-scroll-proportion="0.0">
               <folding />
@@ -55,6 +56,7 @@
       <list>
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/.gitingnore" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -230,7 +232,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitingnore">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="6" selection-start="6" selection-end="6" vertical-scroll-proportion="0.0">
           <folding />
