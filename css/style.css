@@ -1,5 +1,5 @@
 body{ 
-	padding-top: 70px;
+	padding-top: 50px;
 }
 .bs-callout{
 	padding:10px;
@@ -8,7 +8,7 @@ body{
 	border-left-width:5px;
 	border-radius:3px
 }
-.bs-callout h4{
+.bs-callout h5{
 	margin-top:0;
 	margin-bottom:5px
 	}
@@ -24,22 +24,68 @@ body{
 .bs-callout-danger{
 	border-left-color:#d9534f
 }
-.bs-callout-danger h4{
+.bs-callout-danger h5{
 	color:#d9534f
 }
 .bs-callout-warning{
 	border-left-color:#f0ad4e
 }
-.bs-callout-warning h4{
+.bs-callout-warning h5{
 	color:#f0ad4e
 }
 .bs-callout-info{
 	border-left-color:#5bc0de
 }
-.bs-callout-info h4{
+.bs-callout-info h5{
 	color:#5bc0de
 }
 .media img{
 	width:64px;
 	height:64px;
 }
+.form-group{
+	top:17px;
+}
+img{
+	width:100%;
+}
+.ad_left{	
+	padding-right: 0;	
+}
+.ad_right{	
+	padding-left: 0;	
+}
+.advertisement{
+	margin-top: 20px;
+}
+.advertisement div{
+	margin:0;
+}
+.classify_icon div{
+	display: -webkit-box;
+	-webkit-box-orient: horizontal;
+	-webkit-box-pack: center;
+	-webkit-box-align: center;
+	display: -moz-box;
+	-moz-box-orient: horizontal;
+	-moz-box-pack: center;
+	-moz-box-align: center;
+	display: -o-box;
+	-o-box-orient: horizontal;
+	-o-box-pack: center;
+	-o-box-align: center;
+	display: -ms-box;
+	-ms-box-orient: horizontal;
+	-ms-box-pack: center;
+	-ms-box-align: center;
+	display: box;
+	box-orient: horizontal;
+	box-pack: center;
+	box-align: center;
+	background-color: orange;
+	background-repeat: no-repeat;
+	border-radius: 7px;
+	padding: 22px 15px;
+	margin-top:20px;
+}
+
