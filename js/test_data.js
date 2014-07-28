@@ -1,0 +1,26 @@
+var	data = [
+	{
+		"name":"商品名称",
+		"price":"45元",
+		"num":"232",
+		"pic_src":"img/1.jpg"
+	},
+	{
+		"name":"商品名称",
+		"price":"45元",
+		"num":"100",
+		"pic_src":"img/2.jpg"
+	},
+	{
+		"name":"商品名称",
+		"price":"199元",
+		"num":"330",
+		"pic_src":"img/3.jpg"
+	},
+	{
+		"name":"商品名称",
+		"price":"78元",
+		"num":"23",
+		"pic_src":"img/1.jpg"
+	}
+]
