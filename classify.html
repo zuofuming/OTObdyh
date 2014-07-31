@@ -1,9 +1,342 @@
 <html>
 <head>
-	<meta charset="utf-8">
-	<title>本地优惠网</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <title>分类</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <script src="js/jquery-2.1.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
 </head>
 <body>
+    <div class="container-fluid">
+        <header>
+            <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#classify_navbar">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="#">分类</a>
+                    </div>
+                    <div class="collapse navbar-collapse" id="classify_navbar">
+                        <ul class="nav navbar-nav">
+                            <li><a href="index.html">首页</a></li>
+                            <li><a href="favourable.html">找优惠</a></li>
+                            <li><a href="business.html">找商家</a></li>
+                            <li><a href="help.html">帮助</a></li>
+                        </ul>
+                    </div><!-- /.navbar-collapse -->
+                </div><!-- /.container-fluid -->
+            </nav>
+        </header>
 
+        <div class="row"><!--城市与搜索-->
+            <div class="col-xs-5 text-center">
+                <h4>城市</h4>
+                <h6><a href="change_city.html">[切换城市]</a></h6>
+            </div>
+            <div class="col-xs-7">
+                <div class="form-group has-feedback">
+                    <label class="control-label sr-only">search</label>
+                    <input type="text" class="form-control" id="search">
+                    <span class="glyphicon glyphicon-search form-control-feedback"></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="panel-group" id="classify_options">
+
+            <div class="panel panel-success">
+                <div class="panel-heading">
+                    <a data-toggle="collapse" data-parent="#classify_options" href="#classify_options_1">
+                    <h4 class="panel-title text-center">
+                        <span class="glyphicon glyphicon-th-large pull-left"></span>
+                        休闲娱乐
+                    </h4>
+                    </a>
+                </div>
+                <div id="classify_options_1" class="panel-collapse collapse in">
+                    <div class="panel-body">
+                        <div class="list-group">
+                            <a href="#" class="list-group-item">花鸟宠物</a>
+                            <a href="#" class="list-group-item">休闲项目</a>
+                            <a href="#" class="list-group-item">酒吧</a>
+                            <a href="#" class="list-group-item">影院</a>
+                            <a href="#" class="list-group-item">景区/景点</a>
+                            <a href="#" class="list-group-item">KTV</a>
+                            <a href="#" class="list-group-item">体育健身</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <a data-toggle="collapse" data-parent="#classify_options" href="#classify_options_2">
+                        <h4 class="panel-title text-center">
+                            <span class="glyphicon glyphicon-cutlery pull-left"></span>
+                            餐饮住宿
+                        </h4>
+                    </a>
+
+                </div>
+                <div id="classify_options_2" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <div class="list-group">
+                            <a href="#" class="list-group-item">招待所</a>
+                            <a href="#" class="list-group-item">快餐</a>
+                            <a href="#" class="list-group-item">宾馆/度假村</a>
+                            <a href="#" class="list-group-item">饭店餐厅</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <a data-toggle="collapse" data-parent="#classify_options" href="#classify_options_3">
+                        <h4 class="panel-title text-center">
+                            <span class="glyphicon glyphicon-home pull-left"></span>
+                            便民家政
+                        </h4>
+                    </a>
+
+                </div>
+                <div id="classify_options_3" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <div class="panel-body">
+                            <div class="list-group">
+                                <a href="#" class="list-group-item">物流服务</a>
+                                <a href="#" class="list-group-item">洗衣店</a>
+                                <a href="#" class="list-group-item">自选商场</a>
+                                <a href="#" class="list-group-item">家政保洁</a>
+                                <a href="#" class="list-group-item">便利店</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="panel panel-danger">
+                <div class="panel-heading">
+                    <a data-toggle="collapse" data-parent="#classify_options" href="#classify_options_4">
+                        <h4 class="panel-title text-center">
+                            <span class="glyphicon glyphicon-plus pull-left"></span>
+                            医疗保健
+                        </h4>
+                    </a>
+
+                </div>
+                <div id="classify_options_4" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <div class="list-group">
+                            <a href="#" class="list-group-item">药店</a>
+                            <a href="#" class="list-group-item">保健品</a>
+                            <a href="#" class="list-group-item">成人用品</a>
+                            <a href="#" class="list-group-item">医院门诊</a>
+                            <a href="#" class="list-group-item">中医理疗</a>
+                            <a href="#" class="list-group-item">足疗按摩</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="panel panel-warning">
+                <div class="panel-heading">
+                    <a data-toggle="collapse" data-parent="#classify_options" href="#classify_options_5">
+                        <h4 class="panel-title text-center">
+                            <span class="glyphicon glyphicon-signal pull-left"></span>
+                            生活服务
+                        </h4>
+                    </a>
+                </div>
+                <div id="classify_options_5" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <div class="list-group">
+                            <a href="#" class="list-group-item">文化科技</a>
+                            <a href="#" class="list-group-item">广告宣传</a>
+                            <a href="#" class="list-group-item">教育培训</a>
+                            <a href="#" class="list-group-item">街边小店</a>
+                            <a href="#" class="list-group-item">儿童摄影</a>
+                            <a href="#" class="list-group-item">旅行社</a>
+                            <a href="#" class="list-group-item">美容美发</a>
+                            <a href="#" class="list-group-item">婚庆摄影</a>
+                            <a href="#" class="list-group-item">家电专卖</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="panel panel-success">
+                <div class="panel-heading">
+                    <a data-toggle="collapse" data-parent="#classify_options" href="#classify_options_6">
+                        <h4 class="panel-title text-center">
+                            <span class="glyphicon glyphicon-star pull-left"></span>
+                            食品副食
+                        </h4>
+                    </a>
+                </div>
+                <div id="classify_options_6" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <div class="list-group">
+                            <a href="#" class="list-group-item">生鲜食品</a>
+                            <a href="#" class="list-group-item">零食店</a>
+                            <a href="#" class="list-group-item">蛋糕店</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <a data-toggle="collapse" data-parent="#classify_options" href="#classify_options_7">
+                        <h4 class="panel-title text-center">
+                            <span class="glyphicon glyphicon-wrench pull-left"></span>
+                            五金建材
+                        </h4>
+                    </a>
+
+                </div>
+                <div id="classify_options_7" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <div class="list-group">
+                            <a href="#" class="list-group-item">五金店</a>
+                            <a href="#" class="list-group-item">建材店</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <a data-toggle="collapse" data-parent="#classify_options" href="#classify_options_8">
+                        <h4 class="panel-title text-center">
+                            <span class="glyphicon glyphicon-heart pull-left"></span>
+                            孕婴服务
+                        </h4>
+                    </a>
+
+                </div>
+                <div id="classify_options_8" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <div class="panel-body">
+                            <div class="list-group">
+                                <a href="#" class="list-group-item">孕产妇服务</a>
+                                <a href="#" class="list-group-item">婴幼儿服务</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="panel panel-danger">
+                <div class="panel-heading">
+                    <a data-toggle="collapse" data-parent="#classify_options" href="#classify_options_9">
+                        <h4 class="panel-title text-center">
+                            <span class="glyphicon glyphicon-align-justify pull-left"></span>
+                            汽车房产
+                        </h4>
+                    </a>
+
+                </div>
+                <div id="classify_options_9" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <div class="list-group">
+                            <a href="#" class="list-group-item">自行车分类</a>
+                            <a href="#" class="list-group-item">电动车销售</a>
+                            <a href="#" class="list-group-item">摩托车销售</a>
+                            <a href="#" class="list-group-item">房产/房产中介</a>
+                            <a href="#" class="list-group-item">汽车销售/服务</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="panel panel-warning">
+                <div class="panel-heading">
+                    <a data-toggle="collapse" data-parent="#classify_options" href="#classify_options_10">
+                        <h4 class="panel-title text-center">
+                            <span class="glyphicon glyphicon-print pull-left"></span>
+                            家居装饰
+                        </h4>
+                    </a>
+                </div>
+                <div id="classify_options_10" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <div class="list-group">
+                            <a href="#" class="list-group-item">床上用品</a>
+                            <a href="#" class="list-group-item">厨卫用具</a>
+                            <a href="#" class="list-group-item">装饰/装修</a>
+                            <a href="#" class="list-group-item">家具店</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="panel panel-success">
+                <div class="panel-heading">
+                    <a data-toggle="collapse" data-parent="#classify_options" href="#classify_options_11">
+                        <h4 class="panel-title text-center">
+                            <span class="glyphicon glyphicon-gift pull-left"></span>
+                            服装配饰
+                        </h4>
+                    </a>
+                </div>
+                <div id="classify_options_11" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <div class="list-group">
+                            <a href="#" class="list-group-item">精品配饰</a>
+                            <a href="#" class="list-group-item">眼镜店</a>
+                            <a href="#" class="list-group-item">箱包</a>
+                            <a href="#" class="list-group-item">鞋类</a>
+                            <a href="#" class="list-group-item">首饰店</a>
+                            <a href="#" class="list-group-item">服装店</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <a data-toggle="collapse" data-parent="#classify_options" href="#classify_options_12">
+                        <h4 class="panel-title text-center">
+                            <span class="glyphicon glyphicon-shopping-cart pull-left"></span>
+                            所有商场
+                        </h4>
+                    </a>
+
+                </div>
+                <div id="classify_options_12" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <div class="list-group">
+                            <a href="#" class="list-group-item">信誉楼商厦</a>
+                            <a href="#" class="list-group-item">顺义地下商城</a>
+                            <a href="#" class="list-group-item">华贸商业广场</a>
+                            <a href="#" class="list-group-item">华润万家大型综合超市</a>
+                            <a href="#" class="list-group-item">鼎信装饰城</a>
+                            <a href="#" class="list-group-item">百货大楼</a>
+                            <a href="#" class="list-group-item">耀华商厦</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
 </body>
 </html>
