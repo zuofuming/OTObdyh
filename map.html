@@ -1,0 +1,28 @@
+<!DOCTYPE html>  
+<html>  
+<head>  
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />  
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />  
+<style type="text/css">  
+html,body,#l-map {width: 100%;height: 100%;overflow: hidden;hidden;margin:0;}  
+</style>  
+<script type="text/javascript" src="http://api.map.baidu.com/api?type=quick&ak=HDGnyBbeYcSGvF3wNdGq8X9R&v=1.0"></script>  
+<title>显示地图</title>  
+</head>  
+<body>  
+<div id="l-map"></div>  
+</body>
+</html>  
+<script type="text/javascript">  
+var map = new BMap.Map("l-map");  
+var point = new BMap.Point(116.404,39.915);
+map.centerAndZoom(point, 14);      
+var zoomControl=new BMap.ZoomControl();  
+map.addControl(zoomControl);//添加缩放控件  
+var scaleControl=new BMap.ScaleControl();  
+map.addControl(scaleControl);//添加比例尺控件
+var marker = new BMap.Marker(point);        // 创建标注      
+map.addOverlay(marker);
+
+  	
+</script>
