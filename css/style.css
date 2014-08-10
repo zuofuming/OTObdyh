@@ -91,3 +91,9 @@ img{
 .favourable_classify{
 	margin-top:20px;
 }
+#business_map{
+	width: 200px;
+	height: 160px;
+	overflow: hidden;
+	margin:20px;
+}
