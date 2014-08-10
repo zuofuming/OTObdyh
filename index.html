@@ -12,7 +12,7 @@
     <link href="css/style.css" rel="stylesheet">
     <script src="js/jquery-2.1.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-
+    
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -47,18 +47,29 @@
 
         <div class="row"><!--城市与搜索-->
             <div class="col-xs-5 text-center">    
-                <h4>城市</h4>
+                <h5>城市</h5>
                 <h6><a href="change_city.html">[切换城市]</a></h6>    
             </div>
-            <div class="col-xs-5 col-xs-offset-1">
-                <div class="form-group has-feedback">
-                    <label class="control-label sr-only">search</label>
-                    <input type="text" class="form-control" id="search">
-                    <span class="glyphicon glyphicon-search form-control-feedback"></span>
+            <div class="col-xs-7">
+                <div class="row">
+                <!--<form class="form-inline">
+                    <div class="form-group has-feedback col-xs-7">
+                        <label class="control-label sr-only">search</label>
+                        <input type="text" class="form-control" id="search" data-provide="typeahead" data-items="5" style="margin: 0 auto;" autocomplete="off">
+                    </div>
+                    <div class="col-xs-2">
+                        <button class="btn">search</button>
+                    </div>
+                </form>-->
+                <div class="input-group"> 
+                    <input type="text" class="form-control" id="search">  
+                    <span class="input-group-btn">
+                        <button class="btn btn-default" onclick="search()">搜索</button>
+                    </span>
                 </div>
             </div>
+            </div>
         </div>
-
 
         <div class="row"><!--广告位幻灯片-->
             <div id="carousel" class="col-xs-12">
@@ -174,7 +185,7 @@
                 <img src="img/2.jpg">
                   
             </div>
-            <div class="col-xs-6 ad_right"> 
+            <div class="col-xs-6 ad_right" id="scrollspy_goods"> 
                 
                 <img src="img/3.jpg">
                   
@@ -187,7 +198,7 @@
         </div>
         <div class="goods"></div>
         <center>
-            <ul class="pagination"></ul>
+            <form class="form-inline pagination" row="form"></form>
         </center>
 
               
@@ -225,6 +236,7 @@
 
 <script src="js/test_data.js"></script>
 <script src="js/pagination.js"></script>
-
+<script src="js/typeahead.js"></script>
+<script src="js/search.js"></script>
     </body>
 </html>

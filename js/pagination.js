@@ -1,8 +1,7 @@
 var goodsData,  //商品信息
 	num,    //商品数量
     pageSize,   //分页大小
-    pageMaxSize = 5,    //分页最大值
-    pageNum = 10,   //每页显示商品数量
+    pageNum = 5,   //每页显示商品数量
     currentPage = 1;	//默认显示第一页
 
 
@@ -12,48 +11,53 @@ pagination();
 function pagination(){
 	goodsData = data;
 	num = data.length;
-	pageSize = num>pageNum?num/pageNum:1;	//确定页数
+	pageSize = num>pageNum?Math.ceil(num/pageNum):1;	//确定页数
+    
 	//设置分页效果
-    var str = "<li><a href='#' onclick='laquo()'>&laquo;</a></li>"
+    var str = "<a href='#scrollspy_goods' onclick='laquo()'><button class='btn btn-default'>上一页</button></a><select class='form-control'>";
     for(i=0;i<pageSize;i++){
-        str += "<li><a href='#' onclick='goods_show("+(i+1)+")'>"+(i+1)+"</a></li>";
+        str += "<option value='"+(i+1)+"'>第 "+(i+1)+"/"+pageSize+" 页</option>";
     }
-    str += "<li><a href='#' onclick='raquo()'>&raquo;</a></li>";
+   
+    str += "</select><a href='#scrollspy_goods' onclick='raquo()'><button class='btn btn-default'>下一页</button></a>";
     $(".pagination").html(str);
-    //当前页面选中状态
-    active_page(1); 
     //默认显示第一页
-    goods_show(1);
+    goods_show(currentPage);
 }
-//分页选中状态效果
-function active_page(page){
-    $(".pagination li").removeClass();
-    $(".pagination li:nth-child("+(page+1)+")").addClass("active");
-}
+
 function goods_show(page){
+    //alert(page);
     var str="";
     if(page<pageSize){
         for(i=0;i<pageNum;i++){
-        	str +="<div class='row'><div class='col-xs-5'><div class='thumbnail'><img src='"+data[i].pic_src+"'></div></div><div class='col-xs-7'><h5>"+data[i].name+"</h5><p>"+data[i].num+"</p></div></div></div>";
+        	str +="<div class='row'><div class='col-xs-5'><div class='thumbnail'><img src='"+data[pageNum*(page-1)+i].pic_src+"'></div></div><div class='col-xs-7'><h5>"+data[pageNum*(page-1)+i].name+"</h5><p>"+data[pageNum*(page-1)+i].num+"</p></div></div></div>";
         }
     }else{
        for(i=0;i<num-pageNum*(page-1);i++){
-       	str +="<div class='row'><div class='col-xs-5'><div class='thumbnail'><img src='"+data[i].pic_src+"'></div></div><div class='col-xs-7'><h5>"+data[i].name+"</h5><p>"+data[i].num+"</p></div></div></div>";
+       	str +="<div class='row'><div class='col-xs-5'><div class='thumbnail'><img src='"+data[pageNum*(page-1)+i].pic_src+"'></div></div><div class='col-xs-7'><h5>"+data[pageNum*(page-1)+i].name+"</h5><p>"+data[pageNum*(page-1)+i].num+"</p></div></div></div>";
         } 
     }
     $(".goods").html(str);
-    active_page(page);
+    //active_page(page);
     currentPage = page;
 }
 //前一页
 function laquo(){
     if(currentPage>1){
+        $("select").get(0).selectedIndex=currentPage-2; 
         goods_show(currentPage-1);
     }
 }
 //后一页
 function raquo(){
     if(currentPage<pageSize){
-        goods_show(currentPage+1);
+        $("select").get(0).selectedIndex=currentPage; 
+        goods_show(1+parseInt(currentPage));
     }
 }
+
+$("select").change(function(){
+    var option_val = $("select").val();
+    goods_show(option_val);
+    $("select").get(0).selectedIndex=option_val-1;
+});
