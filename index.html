@@ -19,7 +19,28 @@
         <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
         <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-    
+
+
+        <link rel="stylesheet" href="css/ad_swipe.css">
+        <style>
+            .swipe {
+                overflow: hidden;
+                visibility: hidden;
+                position: relative;
+            }
+            .swipe-wrap {
+                overflow: hidden;
+                position: relative;
+            }
+            .swipe-wrap > figure {
+                float: left;
+                width: 100%;
+                position: relative;
+            }
+
+        </style>
+
+
     </head>
     <body>
         
@@ -72,50 +93,68 @@
         </div>
 
         <div class="row"><!--广告位幻灯片-->
-            <div id="carousel" class="col-xs-12">
-                <div class="carousel slide" data-ride="carousel">
-                    <!-- Indicators -->
-                    <ol class="carousel-indicators">
-                        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-                        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-                        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-                    </ol>
+            <div class="page-swipe col-xs-12">
+                <header>
+                    <div id="slider" class="swipe" style="visibility: visible;">
+                        <div class="swipe-wrap">
+                            <figure>
+                                <div class="wrap">
+                                    <div class="image" style="background:url(img/fiftyandtwothirds3.jpg) center no-repeat;background-size: cover"></div>
+                                </div>
+                            </figure>
+                            <figure>
+                                <div class="wrap">
+                                    <div onclick="location.href='index.html'" class="image" style="background:url(img/explorations1.jpg) center no-repeat;background-size: cover"> </div>
+                                </div>
+                            </figure>
+                            <figure>
+                                <div class="wrap">
+                                    <div class="image" style="background:url(img/explorations2.jpg) center no-repeat;background-size: cover"> </div>
+                                </div>
+                            </figure>
+                            <figure>
+                                <div class="wrap">
+                                    <div class="image" style="background:url(img/explorations3.jpg) center no-repeat;background-size: cover"> </div>
+                                </div>
+                            </figure>
+                            <figure>
+                                <div class="wrap">
+                                    <div class="image" style="background:url(img/fiftyandtwothirds3.jpg) center no-repeat;background-size: cover"> </div>
+                                </div>
+                            </figure>
 
-                    <!-- Wrapper for slides -->
-                    <div class="carousel-inner">
-                        <div class="item active">
-                            <img src="img/1.jpg">
-                            <div class="carousel-caption">
-                                <h1>标题</h1>
-                                <p class="lead">这是简介这是简介这是简介这是简介这是简介这是简介</p>
-                            </div>
-                        </div>
-                            
-                        <div class="item">
-                            <img src="img/2.jpg">
-                            <div class="carousel-caption">
-                                <h1>标题</h1>
-                                <p class="lead">这是简介这是简介这是简介这是简介这是简介这是简介</p>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <img src="img/3.jpg">
-                            <div class="carousel-caption">
-                                <h1>标题</h1>
-                                <p class="lead">这是简介这是简介这是简介这是简介这是简介这是简介</p>
-                            </div>
                         </div>
                     </div>
+                    <nav>
+                        <ul id="position">
+                            <li class="on"></li>
+                            <li class=""></li>
+                            <li class=""></li>
+                            <li class=""></li>
+                            <li class=""></li>
+                        </ul>
+                    </nav>
+                </header>
+                <script src="js/ad_swipe.js"></script>
+                <script>
+                    var slider =
+                            Swipe(document.getElementById('slider'), {
+                                auto: 3000,
+                                continuous: true,
+                                callback: function(pos) {
 
-                    <!-- Controls -->
-                    <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
-                        <span class="glyphicon glyphicon-chevron-left"></span>
-                    </a>
-                    <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
-                        <span class="glyphicon glyphicon-chevron-right"></span>
-                    </a>
-                </div>    
+                                    var i = bullets.length;
+                                    while (i--) {
+                                        bullets[i].className = ' ';
+                                    }
+                                    bullets[pos].className = 'on';
+
+                                }
+                            });
+                    var bullets = document.getElementById('position').getElementsByTagName('li');
+                </script>
             </div>
+
         </div>
 
         <div class="row text-center"><!--分类区域-->
