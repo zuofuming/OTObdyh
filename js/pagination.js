@@ -38,6 +38,7 @@ function goods_show(page){
         } 
     }
     $(".goods").html(str);
+    location_to();
     //active_page(page);
     currentPage = page;
 }
@@ -55,7 +56,10 @@ function raquo(){
         goods_show(1+parseInt(currentPage));
     }
 }
-
+//定位函数
+function location_to(){
+    window.location.hash = "#scrollspy_goods";
+}
 $("select").change(function(){
     var option_val = $("select").val();
     goods_show(option_val);
